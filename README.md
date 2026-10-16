@@ -68,3 +68,24 @@ To generate project previews locally, have Google Chrome installed and run `npm 
 | `public/uploads/` | Uploaded images and PDF files |
 
 Client copies are independent: changes in one person's repository do not affect anyone else's. Later improvements to this template must be applied separately to existing copies.
+
+
+## Profile links and education
+
+The sidebar, homepage, and footer reuse the contact links from **Pages CMS → Profile**. Optional links include LinkedIn, GitHub, Google Scholar, ORCID, ResearchGate, arXiv, PubMed, email, and CV. Empty fields stay hidden.
+
+The university line uses the first education entry with an institution in **Experience, education & skills → Education**. Put the institution you want displayed first. No profile or career data needs to be recreated for this update.
+
+The site uses a self-hosted Inter font, wider content columns, and justified long paragraphs on desktop. Mobile paragraphs stay left-aligned for readability.
+
+## Updating an existing client portfolio
+
+Provide changes through a pull request against the client's existing repository. Keep these client-owned paths unchanged:
+
+- `src/data/`
+- `src/content/`
+- `public/uploads/`
+
+Review the pull request's **Files changed** tab before merging. This display update changes components, layout, styles, helper modules, the CMS field definitions, font assets, and package files; it does not replace client content. Merge both `package.json` and `package-lock.json` together. Review conflicts or custom code changes before merging.
+
+Applying a new template ZIP over the whole repository can overwrite content. A template copy does not automatically synchronize updates, so each update should be reviewed and tested in the client repository. Merging the reviewed code update triggers the normal deployment.
