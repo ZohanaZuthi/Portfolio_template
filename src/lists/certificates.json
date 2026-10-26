@@ -1,0 +1,11 @@
+[
+  {
+    "title": "Example: Your certificate",
+    "summary": "Describe the course or professional qualification.",
+    "date": "2026-01-01",
+    "issuer": "Issuing organization",
+    "published": false,
+    "id": "example-certificate",
+    "body": "\nReplace this example with the skills or knowledge you gained.\n"
+  }
+]
