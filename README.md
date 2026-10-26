@@ -106,10 +106,24 @@ Experience descriptions preserve Enter/newline formatting and blank lines. Use t
 
 ## Homepage gallery and named experience links
 
-For award photos, select **Show in homepage gallery** on each photo (or **Show cover in homepage gallery** on the award). No duplicate uploads or entries are needed. For unrelated photos, add a published entry under **Pages CMS → Gallery**, with a title, caption, date, optional location and related URL. Up to six selected photos appear below Milestones; **View full gallery** shows all published gallery and award photos. Reused image paths appear once.
+For award and project photos, select **Show in gallery** on each photo or **Show cover in gallery** on the entry. Certificates have **Show certificate in gallery**. No duplicate uploads or entries are needed. For unrelated photos, add a published entry under **Pages CMS → Gallery**, with a title, caption, date, optional location and related URL. Up to three photos selected with the separate homepage checkbox appear below Milestones; **View full gallery** shows published standalone gallery entries and explicitly selected photos. Reused image paths appear once.
 
 Local gallery photos get 320px/640px WebP thumbnails automatically before `npm run dev` and `npm run build`. Gallery cards and award galleries use these shared thumbnails and lazy loading. Clicking a photo opens the original. Generated files are ignored by Git; original uploads remain untouched. Remote or unsupported images use their original URL. Run `npm run thumbnails` and restart the dev server after adding photos locally.
 
 Experience links use **Related URL** as the destination and **Link title** as the clickable text. Without a custom title, the organization name or “View related page” is used. Certificates appear before awards on Recognition.
 
 Education entries support optional **Related URL** and **Link title** fields, just like experience. The link uses the custom title or the institution name and stays hidden when no URL is supplied. Academic background is listed on About; the homepage does not repeat the education timeline.
+
+## Listing actions, gallery selections and education links
+
+Research listing cards show Read publication and Download PDF when supplied. Project cards show Visit project and View source when supplied. Project photos and captions can be managed under Projects; they appear on the project detail page.
+
+Only selected award/project photos and certificate covers are reused in Gallery. Homepage selections are managed separately as described below. Unchecked photos stay visible on their original entry but are excluded from Gallery. Standalone Gallery entries appear when Published; Feature on homepage additionally selects the preview. Shared images appear once if any published entry selects them; remove every selection (or unpublish any standalone copy) to remove a shared image from Gallery. Thumbnails are generated for projects and certificates too.
+
+Gallery is available in the header on every page. Captions use consistent image proportions and left alignment. Education retains Related URL and Link title and also supports an optional Additional URLs list with URL and Label text fields. Existing education data is preserved.
+
+## Manual ordering and the three-photo homepage gallery
+
+Every project, research entry, certificate, award and standalone gallery entry has an optional **Display order**. Set 1, 2, 3, etc. Numbered entries appear before unnumbered ones; dates break ties and sort entries without an order. Certificates still come before awards on Recognition.
+
+**Show in gallery** selects a photo for the full Gallery only. Use **Feature on homepage** on an award/project photo, **Feature cover on homepage** on a cover/certificate, or **Feature on homepage** on a standalone Gallery entry to select the homepage row. Select your preferred three; if more are selected, the three with the lowest display order appear. Photo display order overrides its entry order. The homepage shows at most three photos, with responsive stacking on small screens. No photos are selected automatically.
