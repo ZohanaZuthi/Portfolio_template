@@ -1,0 +1,15 @@
+{
+  "projects": [
+    "src/content/projects/example-project.md"
+  ],
+  "research": [
+    "src/content/research/example-research.md"
+  ],
+  "certificates": [
+    "src/content/certificates/example-certificate.md"
+  ],
+  "achievements": [
+    "src/content/achievements/example-achievement.md"
+  ],
+  "gallery": []
+}
